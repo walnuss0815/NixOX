@@ -100,6 +100,7 @@
     enable = true;
     userName = "Alexander Weidemann";
     userEmail = "walnuss0815@gmail.com";
+    lfs.enable = true;
     aliases = {
       co = "checkout";
       br = "branch";
@@ -123,21 +124,6 @@
       sub = "submodule";
       edit = "commit --amend --only";
     };
-    extraConfig = {
-      merge = {
-        ff = "only";
-      };
-      pull = {
-        ff = "only";
-      };
-      push = {
-        autoSetupRemote = true;
-      };
-      init = {
-        defaultBranch = "main";
-      };
-    };
-
   };
 
   # starship - an customizable prompt for any shell
