@@ -126,17 +126,24 @@
     };
   };
 
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
     '';
 
     shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
       urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
+    history.size = 10000;
+    history.path = "${config.xdg.dataHome}/zsh/history";
   };
 
   # This value determines the home Manager release that your
