@@ -132,10 +132,6 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
 
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    '';
-
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
