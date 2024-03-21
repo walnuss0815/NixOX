@@ -46,6 +46,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    gnome.adwaita-icon-theme
     vscode
     git
     vim
