@@ -112,6 +112,10 @@
     usbutils # lsusb
   ];
 
+  programs.vscode = {
+    enable = true;
+  };
+
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;

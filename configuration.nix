@@ -48,7 +48,6 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
     gnome.adwaita-icon-theme
-    vscode
     git
     vim
     wget
