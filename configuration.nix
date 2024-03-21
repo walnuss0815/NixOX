@@ -57,6 +57,7 @@
     curl
 
     # UI applications
+    google-chrome
     spotify
   ];
 
