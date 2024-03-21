@@ -37,6 +37,14 @@
     };
   };
 
+  xdg.configFile."mimeapps.list".force = true;
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "google-chrome.desktop";
+    };
+  };
+
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
