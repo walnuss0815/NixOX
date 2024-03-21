@@ -46,12 +46,18 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    # Gnome
     gnomeExtensions.appindicator
     gnome.adwaita-icon-theme
+
+    # Tools
     git
     vim
     wget
     curl
+
+    # UI applications
+    spotify
   ];
 
 #  environment.variables.EDITOR = "vim";
