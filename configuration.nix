@@ -46,6 +46,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
     gnome.adwaita-icon-theme
     vscode
     git
@@ -95,8 +96,9 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.udev.packages = with pkgs; [
+    gnome.gnome-settings-daemon
+  ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alexander = {
