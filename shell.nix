@@ -1,6 +1,6 @@
 { nixpkgs ? import <nixpkgs> {}}:
 
-pkgs.mkShell {
+nixpkgs.mkShell {
   packages = [
     nixpkgs.nixfmt
     ];
