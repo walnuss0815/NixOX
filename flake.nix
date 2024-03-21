@@ -15,6 +15,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-x280
 
           home-manager.nixosModules.home-manager
           {
