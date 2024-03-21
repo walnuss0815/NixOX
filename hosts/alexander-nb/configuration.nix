@@ -5,17 +5,17 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc".device = "/dev/disk/by-uuid/dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc";
-  networking.hostName = "nixos"; # Define your hostname.
+  boot.initrd.luks.devices."luks-dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc".device =
+    "/dev/disk/by-uuid/dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc";
+  networking.hostName = "alexander-nb"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -59,9 +59,12 @@
     # UI applications
     google-chrome
     spotify
+
+    # Nix Home Manager
+    home-manager
   ];
 
-#  environment.variables.EDITOR = "vim";
+  #  environment.variables.EDITOR = "vim";
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -102,9 +105,7 @@
     #media-session.enable = true;
   };
 
-  services.udev.packages = with pkgs; [
-    gnome.gnome-settings-daemon
-  ];
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alexander = {
@@ -112,10 +113,11 @@
     description = "Alexander Weidemann";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    #  firefox
-    #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        #  firefox
+        #  thunderbird
+      ];
   };
 
   # Enable automatic login for the user.

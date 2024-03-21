@@ -10,24 +10,37 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, ... }: {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
+  outputs = { self, nixpkgs, home-manager, nixos-hardware }:
 
-          nixos-hardware.nixosModules.lenovo-thinkpad-x280
+    let
+      system = "x86_64-linux";
 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
 
-            home-manager.users.alexander = import ./home.nix;
-          }
-        ];
+    in {
+      nixosConfigurations = {
+        alexander-nb = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          modules = [
+            ./hosts/alexander-nb/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-x280
+            ./modules/system/docker
+            ./modules/system/printing
+            ./modules/system/nix-storage-optimisation
+          ];
+        };
+      };
+
+      homeConfigurations = {
+        alexander = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          modules = [ ./home.nix ./modules/user/git ./modules/user/vscode ];
+        };
       };
     };
-  };
 }

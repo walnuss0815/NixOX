@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # TODO please change the username & home directory to your own
   home.username = "alexander";
   home.homeDirectory = "/home/alexander";
 
@@ -40,9 +39,7 @@
   xdg.configFile."mimeapps.list".force = true;
   xdg.mimeApps = {
     enable = true;
-    defaultApplications = {
-      "text/html" = "google-chrome.desktop";
-    };
+    defaultApplications = { "text/html" = "google-chrome.desktop"; };
   };
 
   xsession.numlock.enable = true;
@@ -77,12 +74,12 @@
     # networking tools
     mtr # A network diagnostic tool
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
     cowsay
@@ -105,7 +102,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
 
@@ -124,97 +121,10 @@
 
   programs.direnv = {
     enable = true;
-    nix-direnv = {
-      enable = true;
-    };
+    nix-direnv = { enable = true; };
   };
 
-  programs.vscode = {
-    enable = true;
-    userSettings = {
-      "workbench.startupEditor" = "none";
-      "explorer.confirmDelete" = false;
-      "git.autofetch" = true;
-      "files.eol" = "\n";
-      "files.insertFinalNewline" = true;
-      "cSpell.language" = "en;en-US;de-DE";
-      "editor.bracketPairColorization.enabled" = true;
-      "editor.rulers" = [
-          80
-          125
-      ];
-      "git.suggestSmartCommit" = false;
-      "editor.renderWhitespace" = "all";
-      "window.titleBarStyle" = "custom";
-    };
-    extensions = [
-      pkgs.vscode-extensions.eamodio.gitlens
-      pkgs.vscode-extensions.oderwat.indent-rainbow
-      pkgs.vscode-extensions.streetsidesoftware.code-spell-checker
-    ];
-  };
-
-  # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "Alexander Weidemann";
-    userEmail = "walnuss0815@gmail.com";
-    lfs.enable = true;
-    aliases = {
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-      st = "status";
-      unstage = "reset HEAD --";
-      up = "fetch --prune --all";
-      graph = "log --oneline --graph --decorate";
-      fpush = "push --force-with-lease";
-      mr = "push --push-option=merge_request.create --push-option=merge_request.draft";
-      wip = "commit --all --message='WIP'";
-      track = "add --intent-to-add";
-      tow = "pull --recurse-submodules=on-demand";
-      irb = "rebase --interactive --autosquash";
-      repo = "remote --verbose";
-      fuck = "commit --fixup";
-      pfuck = "commit --patch --fixup";
-      fix = "commit --amend --no-edit";
-      pfix = "commit --amend --no-edit --patch";
-      hash = "rev-parse HEAD";
-      sub = "submodule";
-      edit = "commit --amend --only";
-    };
-  };
-
-  # starship - an customizable prompt for any shell
-  programs.starship = {
-    enable = true;
-    # custom settings
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = true;
-    };
-  };
-
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-  programs.alacritty = {
-    enable = true;
-    # custom settings
-    settings = {
-      env.TERM = "xterm-256color";
-      font = {
-        size = 12;
-        draw_bold_text_with_bright_colors = true;
-      };
-      scrolling.multiplier = 5;
-      selection.save_to_clipboard = true;
-    };
-  };
-
-  programs.thefuck = {
-    enable = true;
-  };
+  programs.thefuck = { enable = true; };
 
   programs.zsh = {
     enable = true;
@@ -231,8 +141,10 @@
     shellAliases = {
       ll = "ls -alh";
       update = "sudo nixos-rebuild switch";
-      urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+      urldecode =
+        "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
+      urlencode =
+        "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
 
     history.size = 10000;
