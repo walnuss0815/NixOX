@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}}:
+{ nixpkgs ? import <nixpkgs> {}}:
 
 pkgs.mkShell {
   packages = [
