@@ -159,6 +159,12 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
 
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+      theme = "robbyrussell";
+    };
+
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
