@@ -45,6 +45,8 @@
     };
   };
 
+  xsession.numlock.enable = true;
+
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
