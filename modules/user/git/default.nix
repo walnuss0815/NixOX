@@ -28,5 +28,13 @@
       sub = "submodule";
       edit = "commit --amend --only";
     };
+    extraConfig = {
+      core.eol = "lf";
+      core.autocrlf = false;
+      merge.ff = "only";
+      pull.ff = "only";
+      push.autoSetupRemote = true;
+      init.defaultBranch = "main";
+    };
   };
 }
