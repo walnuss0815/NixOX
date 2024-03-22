@@ -39,7 +39,11 @@
         alexander = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
-          modules = [ ./home.nix ./modules/user/git ./modules/user/vscode ];
+          modules = [
+            ./users/alexander
+            ./modules/user/git
+            ./modules/user/vscode
+          ];
         };
       };
     };
