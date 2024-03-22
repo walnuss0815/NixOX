@@ -53,21 +53,11 @@
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
 
-    neofetch
-    nnn # terminal file manager
-
     # archives
     zip
     xz
     unzip
     p7zip
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processor https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
 
     # networking tools
     mtr # A network diagnostic tool
@@ -96,10 +86,6 @@
     # with more details log output
     nix-output-monitor
 
-    # productivity
-    hugo # static site generator
-    glow # markdown previewer in terminal
-
     btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
@@ -116,38 +102,6 @@
     pciutils # lspci
     usbutils # lsusb
   ];
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv = { enable = true; };
-  };
-
-  programs.thefuck = { enable = true; };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "thefuck" "direnv" ];
-      theme = "robbyrussell";
-    };
-
-    shellAliases = {
-      ll = "ls -alh";
-      update = "sudo nixos-rebuild switch";
-      urldecode =
-        "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      urlencode =
-        "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
-    };
-
-    history.size = 10000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
-  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
