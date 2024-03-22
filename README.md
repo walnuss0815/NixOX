@@ -3,7 +3,7 @@
 ## Build System
 
 ```bash
-nixos-rebuild switch --flake .#alexander-nb
+nixos-rebuild switch --flake .#alexander-nb2
 ```
 
 ## Build Home

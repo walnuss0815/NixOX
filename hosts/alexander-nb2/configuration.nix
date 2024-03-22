@@ -15,7 +15,7 @@
 
   boot.initrd.luks.devices."luks-dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc".device =
     "/dev/disk/by-uuid/dece85fc-0df8-4bf3-8d75-9dbbcc08c6dc";
-  networking.hostName = "alexander-nb"; # Define your hostname.
+  networking.hostName = "alexander-nb2"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

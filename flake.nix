@@ -22,11 +22,11 @@
 
     in {
       nixosConfigurations = {
-        alexander-nb = nixpkgs.lib.nixosSystem {
+        alexander-nb2 = nixpkgs.lib.nixosSystem {
           inherit system;
 
           modules = [
-            ./hosts/alexander-nb/configuration.nix
+            ./hosts/alexander-nb2/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-x280
             ./modules/system/docker
             ./modules/system/printing
