@@ -46,6 +46,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    # LibreOffice
+    libreoffice-qt
+    hunspell
+    hunspellDicts.de_DE
+
     # Gnome
     gnomeExtensions.appindicator
     gnome.adwaita-icon-theme
