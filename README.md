@@ -11,3 +11,9 @@ nixos-rebuild switch --flake .#alexander-nb2
 ```bash
 home-manager switch --flake .#alexander
 ```
+
+## Update Flake
+
+```bash
+nix flake update
+```
