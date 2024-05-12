@@ -53,6 +53,7 @@
 
     # Gnome
     gnomeExtensions.appindicator
+    gnomeExtensions.tailscale-qs
     gnome.adwaita-icon-theme
 
     # Tools

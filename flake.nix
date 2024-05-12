@@ -29,6 +29,7 @@
             ./hosts/alexander-nb2/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-x280
             ./modules/system/docker
+            ./modules/system/tailscale
             ./modules/system/printing
             ./modules/system/nix-storage-optimisation
           ];
