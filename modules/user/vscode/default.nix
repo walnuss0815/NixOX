@@ -13,6 +13,7 @@
       "git.suggestSmartCommit" = false;
       "editor.renderWhitespace" = "all";
       "window.titleBarStyle" = "custom";
+      "update.mode" = "none";
     };
     extensions = [
       pkgs.vscode-extensions.eamodio.gitlens
