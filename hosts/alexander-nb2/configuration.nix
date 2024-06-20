@@ -63,8 +63,7 @@
     curl
 
     # UI applications
-    vivaldi
-    vivaldi-ffmpeg-codecs
+    google-chrome
     spotify
 
     # Nix Home Manager
