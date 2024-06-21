@@ -58,6 +58,7 @@
 
     # Tools
     git
+    git-credential-oauth
     vim
     wget
     curl

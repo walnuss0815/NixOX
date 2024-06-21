@@ -35,6 +35,7 @@
       pull.ff = "only";
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
+      credential.helper = [ "oauth" "cache --timeout 21600" ];
     };
   };
 }
