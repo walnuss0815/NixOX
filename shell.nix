@@ -1,3 +1,3 @@
 { nixpkgs ? import <nixpkgs> { } }:
 
-nixpkgs.mkShell { packages = [ nixpkgs.nixfmt ]; }
+nixpkgs.mkShell { packages = [ nixpkgs.nixpkgs-fmt ]; }
