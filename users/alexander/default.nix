@@ -33,6 +33,13 @@
         tap-to-click = true;
         two-finger-scrolling-enabled = true;
       };
+      "org/gnome/desktop/wm/keybindings" = {
+        switch-windows = ["<Alt>Tab"];
+        switch-windows-backward = ["<Shift><Alt>Tab"];
+      };
+      "org/gnome/shell/window-switcher" = {
+        current-workspace-only = false;
+      };
     };
   };
 
