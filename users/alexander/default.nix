@@ -46,7 +46,10 @@
   xdg.configFile."mimeapps.list".force = true;
   xdg.mimeApps = {
     enable = true;
-    defaultApplications = { "text/html" = "google-chrome.desktop"; };
+    defaultApplications = {
+      "text/html" = "google-chrome.desktop";
+      "application/pdf" = "org.gnome.Evince.desktop";
+    };
   };
 
   # set cursor size and dpi for 4k monitor
