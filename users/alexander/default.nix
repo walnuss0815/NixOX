@@ -111,6 +111,10 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    # development tools
+    glab # Gitlab CLI
+    ghorg # Clone GitHub orgs and Gitlab groups
   ];
 
   # This value determines the home Manager release that your
