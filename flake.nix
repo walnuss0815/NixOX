@@ -35,6 +35,16 @@
             ./modules/system/nix-storage-optimisation
           ];
         };
+
+        frigate = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          modules = [
+            ./hosts/frigate/configuration.nix
+            ./modules/system/nix-storage-optimisation
+            ./modules/system/frigate
+          ];
+        };
       };
 
       homeConfigurations = {

@@ -1,9 +1,16 @@
 # walnuss0815 NixOS
 
-## Build System
+
+## Build System (Local)
 
 ```bash
 sudo nixos-rebuild switch --flake .#alexander-nb2
+```
+
+## Build System (Remote)
+
+```bash
+nixos-rebuild switch --flake .#frigate --target-host alexander@192.168.10.134 --build-host alexander@192.168.10.134 --use-remote-sudo
 ```
 
 ## Build Home
