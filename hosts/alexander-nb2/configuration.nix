@@ -51,11 +51,6 @@
     hunspell
     hunspellDicts.de_DE
 
-    # Gnome
-    gnomeExtensions.appindicator
-    gnomeExtensions.tailscale-qs
-    gnome.adwaita-icon-theme
-
     # Tools
     git
     git-credential-oauth
@@ -72,15 +67,6 @@
   ];
 
   #  environment.variables.EDITOR = "vim";
-
-  services.xserver.excludePackages = [ pkgs.xterm ];
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -111,8 +97,6 @@
     #media-session.enable = true;
   };
 
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alexander = {
     isNormalUser = true;
@@ -129,10 +113,6 @@
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "alexander";
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
