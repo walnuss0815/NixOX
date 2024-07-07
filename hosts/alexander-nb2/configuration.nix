@@ -60,6 +60,7 @@
 
     # UI applications
     google-chrome
+    firefox
     spotify
 
     # Nix Home Manager
