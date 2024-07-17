@@ -15,7 +15,7 @@
       fpush = "push --force-with-lease";
       mr =
         "push --push-option=merge_request.create --push-option=merge_request.draft";
-      wip = "commit --all --message='WIP'";
+      wip = "commit --message='WIP'";
       track = "add --intent-to-add";
       tow = "pull --recurse-submodules=on-demand";
       irb = "rebase --interactive --autosquash";
