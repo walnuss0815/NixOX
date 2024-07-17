@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "jnoortheen.nix-ide"
+        "jnoortheen.nix-ide",
+        "B4dM4n.nixpkgs-fmt",
     ]
 }
