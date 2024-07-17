@@ -27,6 +27,8 @@
       hash = "rev-parse HEAD";
       sub = "submodule";
       edit = "commit --amend --only";
+      cf = "diff-tree --no-commit-id --name-only";
+      cfr = "cf -r";
     };
     extraConfig = {
       core.eol = "lf";
