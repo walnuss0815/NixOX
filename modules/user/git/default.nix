@@ -21,9 +21,9 @@
       irb = "rebase --interactive --autosquash";
       repo = "remote --verbose";
       fuck = "commit --fixup";
-      pfuck = "fuck --patch";
+      pfuck = "commit --patch --fixup";
       fix = "commit --amend --no-edit";
-      pfix = "fix --patch";
+      pfix = "commit --amend --no-edit --patch";
       hash = "rev-parse HEAD";
       sub = "submodule";
       edit = "commit --amend --only";
