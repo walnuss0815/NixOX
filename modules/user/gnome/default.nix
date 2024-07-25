@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     gnomeExtensions.appindicator
     gnomeExtensions.tailscale-qs
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
   ];
 
   dconf = {
