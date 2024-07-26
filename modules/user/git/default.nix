@@ -29,6 +29,7 @@
       edit = "commit --amend --only";
       cf = "diff-tree --no-commit-id --name-only";
       cfr = "cf -r";
+      asq = "rebase --autosquash";
     };
     extraConfig = {
       core.eol = "lf";
