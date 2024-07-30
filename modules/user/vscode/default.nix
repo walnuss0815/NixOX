@@ -15,7 +15,7 @@
       "window.titleBarStyle" = "custom";
       "update.mode" = "none";
       "editor.insertSpaces" = true;
-      "editor.tabSize" = 4;
+      "editor.tabSize" = 2;
       "editor.detectIndentation" = true;
     };
     extensions = [
