@@ -31,6 +31,7 @@
             ./modules/system/gnome
             ./modules/system/docker
             ./modules/system/tailscale
+            ./modules/system/netbird
             ./modules/system/printing
             ./modules/system/nix-storage-optimisation
           ];
