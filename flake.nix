@@ -28,7 +28,7 @@
           modules = [
             ./hosts/alexander-nb2/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-x280
-            ./modules/system/gnome
+            ./modules/system/budgie
             ./modules/system/docker
             ./modules/system/tailscale
             ./modules/system/netbird
@@ -44,7 +44,7 @@
 
           modules = [
             ./users/alexander
-            ./modules/user/gnome
+            ./modules/user/budgie
             ./modules/user/shell
             ./modules/user/git
             ./modules/user/vscode
