@@ -7,15 +7,6 @@
     # Enable the GNOME Desktop Environment.
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-
-    # Enable XMonad Desktop Environment
-    windowManager = {
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        config = builtins.readFile ./xmonad.hs;
-      };
-    };
   };
 
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
