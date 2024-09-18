@@ -2,6 +2,7 @@
   programs.vscode = {
     enable = true;
     userSettings = {
+      "update.showReleaseNotes" = false;
       "workbench.startupEditor" = "none";
       "explorer.confirmDelete" = false;
       "git.autofetch" = true;
