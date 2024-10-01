@@ -62,6 +62,7 @@
     google-chrome
     firefox
     spotify
+    calls
 
     # Nix Home Manager
     home-manager
