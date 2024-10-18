@@ -63,6 +63,7 @@
     firefox
     spotify
     calls
+    vesktop
 
     # Nix Home Manager
     home-manager
