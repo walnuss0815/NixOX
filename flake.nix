@@ -36,6 +36,22 @@
             ./modules/system/nix-storage-optimisation
           ];
         };
+
+        owhug-nb1 = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          modules = [
+            ./hosts/owhug-nb1/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
+            nixos-hardware.nixosModules.common-pc-laptop-ssd
+            ./modules/system/gnome
+            ./modules/system/docker
+            ./modules/system/tailscale
+            ./modules/system/netbird
+            ./modules/system/printing
+            ./modules/system/nix-storage-optimisation
+          ];
+        };
       };
 
       homeConfigurations = {
