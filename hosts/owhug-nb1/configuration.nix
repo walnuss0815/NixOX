@@ -135,6 +135,9 @@
   services.xserver.wacom.enable = true;
   boot.blacklistedKernelModules = ["raydium_i2c_ts"];
 
+  # Fingerprint reader: login and unlock with fingerprint (if you add one with `fprintd-enroll`)
+  services.fprintd.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
