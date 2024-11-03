@@ -131,6 +131,10 @@
 
   programs.zsh.enable = true;
 
+  # Touchscreen
+  services.xserver.wacom.enable = true;
+  boot.blacklistedKernelModules = ["raydium_i2c_ts"];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
