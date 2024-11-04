@@ -70,6 +70,7 @@
     calls
     vesktop
     gnome-boxes
+    gnomeExtensions.battery-health-charging
 
     # Nix Home Manager
     home-manager
