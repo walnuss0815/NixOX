@@ -46,7 +46,6 @@
             nixos-hardware.nixosModules.common-pc-laptop-ssd
             ./modules/system/gnome
             ./modules/system/docker
-            ./modules/system/tailscale
             ./modules/system/netbird
             ./modules/system/printing
             ./modules/system/nix-storage-optimisation
