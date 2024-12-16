@@ -27,11 +27,14 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "text/html" = "google-chrome.desktop";
-      "x-scheme-handler/http" = "google-chrome.desktop";
-      "x-scheme-handler/https" = "google-chrome.desktop";
-      "x-scheme-handler/about" = "google-chrome.desktop";
-      "x-scheme-handler/unknown" = "google-chrome.desktop";
+      # Browser
+      "text/html" = "org.mozilla.firefox.desktop";
+      "x-scheme-handler/http" = "org.mozilla.firefox.desktop";
+      "x-scheme-handler/https" = "org.mozilla.firefox.desktop";
+      "x-scheme-handler/about" = "org.mozilla.firefox.desktop";
+      "x-scheme-handler/unknown" = "org.mozilla.firefox.desktop";
+
+      # PDF
       "application/pdf" = "org.gnome.Evince.desktop";
     };
   };
@@ -99,6 +102,8 @@
     # development tools
     glab # Gitlab CLI
     ghorg # Clone GitHub orgs and Gitlab groups
+
+    firefox
   ];
 
   # This value determines the home Manager release that your
