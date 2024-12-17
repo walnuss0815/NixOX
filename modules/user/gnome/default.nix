@@ -26,12 +26,6 @@
       "org/gnome/shell/window-switcher" = {
         current-workspace-only = false;
       };
-      "org/gnome/mutter" = {
-        experimental-features = [
-          "variable-refresh-rate"
-          "scale-monitor-framebuffer"
-        ];
-      };
     };
   };
 }
