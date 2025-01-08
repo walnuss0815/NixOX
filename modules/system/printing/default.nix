@@ -11,4 +11,19 @@
   hardware.sane.extraBackends = [ ];
   # Simple graphical scanning utility
   environment.systemPackages = [ pkgs.simple-scan ];
+
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "Alexander_BW";
+        location = "Alexander's Home";
+        deviceUri = "http://192.168.10.174:631/ipp";
+        model = "drv:///sample.drv/generpcl.ppd";
+        ppdOptions = {
+          PageSize = "A4";
+        };
+      }
+    ];
+    ensureDefaultPrinter = "Alexander_BW";
+  };
 }
