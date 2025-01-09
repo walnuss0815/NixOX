@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   services.printing.enable = true;
-  services.printing.drivers = [ ];
+  services.printing.drivers = [ pkgs.cups-brother-mfcl2750dw ];
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
   # for a WiFi printer
@@ -16,11 +16,18 @@
     ensurePrinters = [
       {
         name = "Alexander_BW";
-        location = "Alexander's Home";
-        deviceUri = "http://192.168.10.174:631/ipp";
-        model = "drv:///sample.drv/generpcl.ppd";
+        description = "Alexander BW";
+        location = "Alexander's Office";
+        deviceUri = "lpd://192.168.10.174/binary_p1";
+        model = "brother-MFCL2750DW-cups-en.ppd";
         ppdOptions = {
           PageSize = "A4";
+          BrMediaType = "PLAIN";
+          Resolution = "600dpi";
+          InputSlot = "TRAY1";
+          Duplex = "None";
+          BRPassword = "False";
+          TonerSaveMode = "OFF";
         };
       }
     ];
