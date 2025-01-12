@@ -139,6 +139,13 @@
 
   programs.zsh.enable = true;
 
+  # AMD GPU
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Touchscreen
   services.xserver.wacom.enable = true;
   boot.blacklistedKernelModules = ["raydium_i2c_ts"];
