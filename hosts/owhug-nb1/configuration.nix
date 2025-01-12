@@ -146,6 +146,9 @@
     enable32Bit = true;
   };
 
+  # Latest Linux kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Touchscreen
   services.xserver.wacom.enable = true;
   boot.blacklistedKernelModules = ["raydium_i2c_ts"];
