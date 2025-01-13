@@ -30,6 +30,7 @@
       cf = "diff-tree --no-commit-id --name-only";
       cfr = "cf -r";
       asq = "rebase --autosquash";
+      cb = "rev-parse --abbrev-ref HEAD";
     };
     extraConfig = {
       core.eol = "lf";
